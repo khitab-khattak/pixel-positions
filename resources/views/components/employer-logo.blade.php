@@ -1,0 +1,1 @@
+<img class="rounded-xl" src="https://dummyimage.com/90x90/cccccc/000000" alt="Placeholder">
