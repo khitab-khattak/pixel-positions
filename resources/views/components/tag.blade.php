@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../assets/css/tag.css">
-@props(['size' => 'base'])
+@props(['tag','size' => 'base'])
 @php
     $classes = 'tag bg-white/10 transition-colors duration-300 hover:bg-white/25 rounded-xl   font-bold';
     if ($size == 'base') {
@@ -10,6 +10,6 @@
     }
 @endphp
 
-<a class="{{ $classes }}" href="#">
-    {{ $slot }}
+<a href="/tags/{{ strtolower($tag->name) }}" class="{{ $classes }}" href="#">
+    {{ $tag->name }}
 </a>
