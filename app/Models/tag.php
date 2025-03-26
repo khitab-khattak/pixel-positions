@@ -9,4 +9,8 @@ class tag extends Model
 {
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
+    public function jobs()
+    {
+        return $this->belongsToMany(Job::class);
+    }
 }
