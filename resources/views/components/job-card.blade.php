@@ -7,7 +7,7 @@
             <a href="{{ $job->url }}">{{ $job->title }}</a>
             
         </h3>
-        <p class="text-sm mt-6">{{ $job->salary }}</p>
+        <p class="text-sm mt-6"> ${{ number_format($job->salary) }}</p>
     </div>
     <div class="flex justify-between  items-center mt-auto">
         <div class="flex gap-1">
@@ -16,8 +16,10 @@
             @endforeach
             
         </div>
-       <x-employer-logo :employer="$job->employer" :width="42"/>
-
-    </div>
+       
+        <img class="w-10 h-10 rounded-xl object-cover" 
+        src="{{ asset('storage/' . $job->employer->logo) }}" 
+        alt="{{ $job->employer->name }} logo">
+     </div>
 
 </x-panel>

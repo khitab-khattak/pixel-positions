@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Employer::class);
             $table->string('title');
-            $table->string('salary');
+            $table->float('salary');
             $table->string('location');
             $table->string('schedule')->default('Full Time');
             $table->string('url');

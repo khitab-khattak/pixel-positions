@@ -1,5 +1,10 @@
-@props(['width' => 90])
+@php
+    $logoPath = $job->employer->logo 
+        ? asset('storage/' . $job->employer->logo) 
+        : 'https://via.placeholder.com/80?text=Logo';
+@endphp
 
-<img class="rounded-xl" src="https://picsum.photos/seed/{{ uniqid() }}/{{ $width }}" alt="Random Image">
-
+<img class="w-20 h-20 rounded-xl object-cover"
+     src="{{ $logoPath }}"
+     alt="{{ $job->employer->name }} logo">
 

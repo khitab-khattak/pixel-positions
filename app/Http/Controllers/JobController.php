@@ -49,7 +49,7 @@ class JobController extends Controller
             'location'  => ['required'],
             'schedule'  => ['required', Rule::in(['Part Time', 'Full Time'])],
             'url'       => ['required', 'active_url'],
-            'logo' => 'required',
+            
             'tags'      => ['nullable', 'array'],
         ]);
     
